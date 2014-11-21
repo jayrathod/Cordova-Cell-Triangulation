@@ -1,15 +1,15 @@
-Cordova-Fetch-Geo-coordinates-without-internet-connection
+Cordova-Cell-Triangulation-Plugin
 =========================================================
 
 Cordova provides GeoLocation api to fetch geo coordinates. The default plugin provides information about the device's location, such as latitude and longitude. Common sources of location information include Global Positioning System (GPS) and location inferred from network signals such as IP address, RFID, WiFi and Bluetooth MAC addresses, and GSM/CDMA cell IDs.
 
 This plugin retrives geo-coordinates data without internet or wifi connection. It mainly uses the GSM/CDMA cell IDs
-to triangulate a location based on cell tower. Cell triangulation can be achieved by two ways viz.
+to triangulate a location based on cell tower. To fetch data using GPS satellite the device should support GPS functionality and should grant permission to access my location feature in settings panel. Cell triangulation can be achieved by two ways viz.
 <ul>
 <li>Using Cell Network</li> 
 <li>Using GPS Location</li> 
 </ul>
-The Cell Network retrives data from cell Tower based on signal strength and returns the latitude and longitude of nearest cell tower and GPS location requires the cellphone to enable GPS Location functionality which in turn retrives data from GPS satellite. Both of these process requires clear sky to fetch geo-coords data obstacles like wall,Multi-store building tends to weak the signal.
+The Cell Network retrives data from cell Tower based on signal strength and returns the latitude and longitude of nearest cell tower and GPS location requires the cellphone to enable GPS Location functionality which in turn retrives data from GPS satellite. Both of these process requires clear sky i.e no barrier between the requesting device and the open sky to fetch geo-coords data. Obstacles like wall,Multi-store building tends to weak the signal.
 
 <strong>Kindly Note:</strong> The Geo-coordinates retrived from above techniques are approximate and should not be used in data critical senarios. The response from above techniques may vary from fews seconds to 20 minutes depending on native LocationManager class implementation.
 
@@ -22,7 +22,8 @@ This plugin also provides extra information like networkOperator,networkType,MCC
 <li>Download the repo using GIT or just a ZIP from Github.</li>
 <li>Add the plugin to your project (from the root of your project):<br/><br/>
 
-   phonegap plugin add https://github.com/jayrathod/Cordova-Fetch-Geo-coordinates-without-internet-connection.git</li>
+   cordova plugin add https://github.com/jayrathod/Cordova-Cell-Triangulation.git</li>
+   
 </ol>
 <h3>Using the plugin</h3>
 
